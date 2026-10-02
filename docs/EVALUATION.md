@@ -35,3 +35,9 @@ Local Python tests, formatting, type checks, skill validation and the offline su
 Python 3.12.14: 53 pytest tests passed; 16/16 deterministic development fixtures passed. Ruff lint/format, strict mypy and both skill-contract checks passed. See `evals/results.json` for engine-only timings and the fixture hash.
 
 A separate agent read `pmo-status/SKILL.md`, ran validate/review/report on the synthetic example, and surfaced the reported GREEN versus screened RED contradiction, blocker I1 and high risk R1. This is one qualitative forward test with tool execution, not a comparative model benchmark. No model latency, token usage or cost was captured. The RAID skill has contract and engine coverage but has not yet had an independent extraction study.
+
+## Paired probe tooling
+
+See [BENCHMARK.md](BENCHMARK.md) for the executable, bounded Responses API runner, frozen study manifests, ten public pilot cases, deterministic scoring and blinded human-review workflow. This component probe does not execute full agent workflows. The legacy `evals/score_runs.py` accepts manually labeled paired records and now rejects mixed-model aggregation and success labels that contradict detection outcomes.
+
+The expanded offline suite passes 75 tests, including real-SDK mocked transport checks. No API credentials were configured in the authoring environment, so no live model benchmark or measured quality uplift is claimed.
