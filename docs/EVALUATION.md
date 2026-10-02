@@ -28,7 +28,7 @@ The host controls rate limits and token budgets. Set an explicit per-run output 
 
 ## Validation record
 
-Local Python tests, formatting, type checks, skill validation and the offline suite are run before the initial commit. See committed `evals/results.json` for measured offline outcomes. Live provider baselines and cross-client installation tests have not been run. Docker configuration is provided; Docker is unavailable in the build environment, so a local container build has not been verified. CI includes a container smoke test.
+Local Python tests, formatting, type checks, skill validation and the offline suite are run before the initial commit. See committed `evals/results.json` for measured offline outcomes. Live provider baselines and cross-client installation tests have not been run. Docker configuration is provided; Docker is unavailable in the build environment, so a local container build has not been verified. GitHub Actions [run 37051631669](https://github.com/faisal50ai/pmo-skills/actions/runs/37051631669) passed both Python 3.11/3.12 jobs and the Docker build/CLI smoke test.
 
 ### Initial local run — 2026-10-02
 
