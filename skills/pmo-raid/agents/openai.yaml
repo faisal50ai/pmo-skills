@@ -1,0 +1,4 @@
+interface:
+  display_name: "PMO RAID Review"
+  short_description: "Review evidence and propose safe RAID updates"
+  default_prompt: "Use $pmo-raid to review these project notes and propose evidence-linked RAID changes."
