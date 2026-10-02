@@ -1,0 +1,86 @@
+{
+  "project_id": "DEMO",
+  "name": "Synthetic service launch",
+  "revision": 1,
+  "as_of": "2026-10-02",
+  "reported_status": "GREEN",
+  "coverage_confirmed": true,
+  "reported_status_evidence": [
+    {
+      "source_id": "S1",
+      "quote": "Overall status is Green."
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Synthetic weekly notes",
+      "observed_on": "2026-10-01",
+      "text": "Overall status is Green. Interface acceptance is due 2026-10-09 and remains incomplete. The interface is unavailable and blocks acceptance. Demo integration lead owns the repair due 2026-10-05. Repair the interface and repeat acceptance testing. Vendor delivery may slip; likelihood 3 and impact 5. Demo vendor lead will confirm delivery by 2026-10-06."
+    }
+  ],
+  "milestones": [
+    {
+      "id": "M1",
+      "title": "Interface acceptance",
+      "due_on": "2026-10-09",
+      "complete": false,
+      "evidence": [
+        {
+          "source_id": "S1",
+          "quote": "Interface acceptance is due 2026-10-09 and remains incomplete."
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "I1",
+      "kind": "issue",
+      "title": "Interface unavailable",
+      "status": "open",
+      "owner": "Demo integration lead",
+      "due_on": "2026-10-05",
+      "response": "Repair the interface and repeat acceptance testing.",
+      "updated_on": "2026-10-01",
+      "evidence": [
+        {
+          "source_id": "S1",
+          "quote": "The interface is unavailable and blocks acceptance."
+        },
+        {
+          "source_id": "S1",
+          "quote": "Demo integration lead owns the repair due 2026-10-05."
+        },
+        {
+          "source_id": "S1",
+          "quote": "Repair the interface and repeat acceptance testing."
+        }
+      ],
+      "blocker": true,
+      "milestone_id": "M1"
+    },
+    {
+      "id": "R1",
+      "kind": "risk",
+      "title": "Vendor delivery may slip",
+      "status": "open",
+      "owner": "Demo vendor lead",
+      "due_on": "2026-10-06",
+      "response": "Confirm vendor delivery.",
+      "updated_on": "2026-10-01",
+      "evidence": [
+        {
+          "source_id": "S1",
+          "quote": "Vendor delivery may slip; likelihood 3 and impact 5."
+        },
+        {
+          "source_id": "S1",
+          "quote": "Demo vendor lead will confirm delivery by 2026-10-06."
+        }
+      ],
+      "likelihood": 3,
+      "impact": 5
+    }
+  ]
+}
