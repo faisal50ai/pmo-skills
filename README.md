@@ -34,16 +34,18 @@ The host agent performs interpretation. Python verifies structure, literal evide
 
 ## Evals & benchmarks
 
-See [evaluation methodology](docs/EVALUATION.md) and the committed [offline results](evals/results.json). The result file is produced by the evaluation command below.
+See the [paired model-probe guide](docs/BENCHMARK.md), [evaluation methodology](docs/EVALUATION.md) and the committed [offline results](evals/results.json). The result file is produced by the evaluation command below.
 
 | Measure | v0.1 treatment |
 | --- | --- |
 | Rule correctness | 16/16 development fixtures pass exact status and finding-set checks |
-| Regression suite | 53 tests pass, including bad types, fabricated references, unsafe revisions and paired-run scoring |
+| Regression suite | 75 tests pass, including bad types, fabricated references, unsafe revisions and paired-run scoring |
 | Model extraction accuracy | Not benchmarked; requires real host-agent runs |
 | Model latency / cost per query | Not measured; the offline CLI performs no model calls |
 | CLI latency | Measured by the offline harness; machine-specific, not an LLM benchmark |
 | Time saved | Not measured; no productivity claim |
+
+The optional paired probe adds ten public synthetic cases, randomized baseline/skill runs, explicit request and spend controls, and blinded semantic-review packets. No live model comparison has been run.
 
 Run `python evals/run.py` to emit fresh JSON results to stdout. Use `python evals/score_runs.py PATH.jsonl` to score paired baseline/skill model outputs collected through your host. No API credentials are needed for the offline suite.
 
