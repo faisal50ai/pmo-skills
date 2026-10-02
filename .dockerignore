@@ -1,0 +1,6 @@
+.git
+.venv
+.env
+private
+local-results
+__pycache__
