@@ -11,7 +11,8 @@ requires-python = ">=3.11"
 dependencies = ["pydantic>=2.10,<3", "opentelemetry-sdk>=1.30,<2"]
 
 [project.optional-dependencies]
-dev = ["pytest>=8,<10", "ruff>=0.11,<1", "mypy>=1.15,<2", "PyYAML>=6,<7", "types-PyYAML>=6,<7"]
+benchmark = ["openai>=2,<3"]
+dev = ["openai>=2,<3", "pytest>=8,<10", "ruff>=0.11,<1", "mypy>=1.15,<2", "PyYAML>=6,<7", "types-PyYAML>=6,<7"]
 
 [project.scripts]
 pmo = "pmo_skills.cli:main"

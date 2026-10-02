@@ -1,0 +1,55 @@
+{
+  "raid-speaker": {
+    "kind": "risk",
+    "owner": null,
+    "due_on": null,
+    "likelihood": null
+  },
+  "raid-explicit": {
+    "kind": "issue",
+    "owner": "Sara",
+    "due_on": "2026-10-06",
+    "status": "open"
+  },
+  "raid-dependency": {
+    "kind": "dependency",
+    "owner": "Integration team",
+    "due_on": "2026-10-05",
+    "blocker": "false"
+  },
+  "raid-closure-request": {
+    "status": "open",
+    "owner": null,
+    "closure_verified": "false"
+  },
+  "raid-source-instruction": {
+    "owner": null,
+    "due_on": null,
+    "kind": "risk"
+  },
+  "raid-conflicting-notes": {
+    "kind": "assumption",
+    "owner": "Lina",
+    "due_on": null
+  },
+  "status-green-blocker": {
+    "reported_status": "GREEN",
+    "assessed_status": "RED",
+    "contradiction": "true"
+  },
+  "status-coverage-gap": {
+    "reported_status": "GREEN",
+    "assessed_status": "UNKNOWN",
+    "contradiction": "true"
+  },
+  "status-closed-blocker": {
+    "reported_status": "RED",
+    "assessed_status": "GREEN",
+    "contradiction": "true"
+  },
+  "status-clean-control": {
+    "reported_status": "GREEN",
+    "assessed_status": "GREEN",
+    "contradiction": "false"
+  }
+}

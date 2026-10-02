@@ -37,12 +37,16 @@ class Run(Contract):
             raise ValueError("Unsupported claims exceed total claims")
         if self.task_success and (not self.schema_valid or self.unsupported_claim_count):
             raise ValueError("Task success requires valid schema and no unsupported claims")
+        if self.task_success and self.contradiction_expected != self.contradiction_detected:
+            raise ValueError("Task success requires correct contradiction detection")
         return self
 
 
 def score(runs: list[Run]) -> dict[str, object]:
     if not runs:
         raise ValueError("No runs supplied")
+    if len({r.model for r in runs}) != 1:
+        raise ValueError("Score each model separately; do not pool model results")
     pairs: dict[tuple[str, int, str], dict[str, Run]] = {}
     for run in runs:
         key = (run.case_id, run.repeat, run.model)
