@@ -1,0 +1,4 @@
+interface:
+  display_name: "PMO Status Review"
+  short_description: "Draft status reports with traceable exceptions"
+  default_prompt: "Use $pmo-status to produce an evidence-backed status review from this project record."
