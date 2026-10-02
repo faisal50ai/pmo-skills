@@ -1,0 +1,148 @@
+{
+  "suite": "offline-development-fixtures",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "cases_sha256": "32478b85ccd4179bd93493adacd3a4dc10042d7cbf60b41d567a6e23e0d4ac5a",
+  "passed": 16,
+  "total": 16,
+  "median_cli_engine_ms": 0.029958999903101358,
+  "max_cli_engine_ms": 0.18150699997931952,
+  "model_calls": 0,
+  "model_quality_measured": false,
+  "results": [
+    {
+      "case": "confirmed-empty",
+      "passed": true,
+      "actual_status": "GREEN",
+      "actual_codes": []
+    },
+    {
+      "case": "unconfirmed-empty",
+      "passed": true,
+      "actual_status": "UNKNOWN",
+      "actual_codes": [
+        "COVERAGE_UNCONFIRMED",
+        "STATUS_MISMATCH"
+      ]
+    },
+    {
+      "case": "green-with-blocker",
+      "passed": true,
+      "actual_status": "RED",
+      "actual_codes": [
+        "HIGH_RISK",
+        "OPEN_BLOCKER",
+        "STATUS_MISMATCH"
+      ]
+    },
+    {
+      "case": "blocker-with-unknown-coverage",
+      "passed": true,
+      "actual_status": "RED",
+      "actual_codes": [
+        "COVERAGE_UNCONFIRMED",
+        "HIGH_RISK",
+        "OPEN_BLOCKER",
+        "STATUS_MISMATCH"
+      ]
+    },
+    {
+      "case": "overdue-milestone",
+      "passed": true,
+      "actual_status": "RED",
+      "actual_codes": [
+        "MILESTONE_OVERDUE",
+        "STATUS_MISMATCH"
+      ]
+    },
+    {
+      "case": "risk-at-threshold",
+      "passed": true,
+      "actual_status": "AMBER",
+      "actual_codes": [
+        "HIGH_RISK",
+        "STATUS_MISMATCH"
+      ]
+    },
+    {
+      "case": "risk-below-threshold",
+      "passed": true,
+      "actual_status": "GREEN",
+      "actual_codes": []
+    },
+    {
+      "case": "unscored-risk",
+      "passed": true,
+      "actual_status": "AMBER",
+      "actual_codes": [
+        "STATUS_MISMATCH",
+        "UNSCORED_RISK"
+      ]
+    },
+    {
+      "case": "missing-action-fields",
+      "passed": true,
+      "actual_status": "AMBER",
+      "actual_codes": [
+        "MISSING_DUE_ON",
+        "MISSING_OWNER",
+        "MISSING_RESPONSE",
+        "STATUS_MISMATCH"
+      ]
+    },
+    {
+      "case": "stale-evidence",
+      "passed": true,
+      "actual_status": "AMBER",
+      "actual_codes": [
+        "STALE_SOURCE",
+        "STATUS_MISMATCH"
+      ]
+    },
+    {
+      "case": "freshness-boundary",
+      "passed": true,
+      "actual_status": "GREEN",
+      "actual_codes": []
+    },
+    {
+      "case": "overdue-stale-item",
+      "passed": true,
+      "actual_status": "AMBER",
+      "actual_codes": [
+        "ACTION_OVERDUE",
+        "STALE_ITEM",
+        "STATUS_MISMATCH"
+      ]
+    },
+    {
+      "case": "duplicate-title",
+      "passed": true,
+      "actual_status": "AMBER",
+      "actual_codes": [
+        "POSSIBLE_DUPLICATE",
+        "STATUS_MISMATCH"
+      ]
+    },
+    {
+      "case": "reported-red-no-rule",
+      "passed": true,
+      "actual_status": "GREEN",
+      "actual_codes": [
+        "STATUS_MISMATCH"
+      ]
+    },
+    {
+      "case": "closed-blocker",
+      "passed": true,
+      "actual_status": "GREEN",
+      "actual_codes": []
+    },
+    {
+      "case": "source-text-is-data",
+      "passed": true,
+      "actual_status": "GREEN",
+      "actual_codes": []
+    }
+  ]
+}
